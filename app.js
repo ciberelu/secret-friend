@@ -13,11 +13,12 @@ amigoIngresado.addEventListener("keypress", function(e){
 
 function agregarAmigo() {
     console.log(amigoIngresado.value)
-    if (amigoIngresado.value == ""){
+    if (amigoIngresado.value.trim().length == 0){
         alert("por favor, inserte un nombre")
         return
     }
-    amigos.push(amigoIngresado.value)
+
+    amigos.push(amigoIngresado.value.trim())
     amigoIngresado.value = ""
     amigoIngresado.autofocus = "true"
     listarAmigos()
