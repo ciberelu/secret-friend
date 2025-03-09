@@ -12,7 +12,6 @@ amigoIngresado.addEventListener("keypress", function(e){
 
 
 function agregarAmigo() {
-    console.log(amigoIngresado.value)
     if (amigoIngresado.value.trim().length == 0){
         alert("por favor, inserte un nombre")
         return
@@ -29,7 +28,6 @@ function agregarAmigo() {
     listaAmigosHTML.innerHTML = ""
     amigos.forEach(amigo => {
         listaAmigosHTML.innerHTML += `<li>${amigo}</li>`
-        console.log("agregado")
 
     })
  }
@@ -42,6 +40,5 @@ function agregarAmigo() {
     }
     //se obtiene el numero aleatorio, se suma 1 para coincida a como lo el usuario cuenta el listado a partir de 1
     let numeroSecreto = Math.floor(Math.random() * amigos.length + 1) 
-    console.log("numero secreto", numeroSecreto)
     mostrarGanador.innerHTML = amigos[numeroSecreto - 1 ] //restamos uno para que coincida con el indice del array
  }
